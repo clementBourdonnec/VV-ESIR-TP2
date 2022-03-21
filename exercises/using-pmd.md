@@ -5,7 +5,7 @@ Pick a Java project from Github (see the [instructions](../sujet.md) for suggest
 ## Answer
 
 ### False Positive
-
+<p style="margin-left:10%; margin-right:10%;">
 <b>File</b> : /commons-math-master/commons-math-core/src/main/java/org/apache/commons/math4/core/jdkmath/AccurateMath.java:4086 
 
 <b>Code</b>        : PrintStream out = System.out;
@@ -13,10 +13,10 @@ Pick a Java project from Github (see the [instructions](../sujet.md) for suggest
 <b>PMD error</b>   : "CloseResource:	Ensure that resources like this PrintStream object are closed after use"  
 
 PMD is complaining because there is no call to "out.close()" in the method. But calling "out.close()" will close System.out wich will cause every upcoming   System.out.println() to fail.  
-
+<p>
 
 ### True Positive
-
+<p style="margin-left:10%; margin-right:10%;">
 <b>File</b>        : /commons-math-master/commons-math-core/src/main/java/org/apache/commons/math4/core/jdkmath/AccurateMathCalc.java:100  
 
 <b>Code</b>        : private static void buildSinCosTables(double[] SINE_TABLE_A, double[] SINE_TABLE_B,  
@@ -30,3 +30,5 @@ PMD is complaining because there is no call to "out.close()" in the method. But 
                                           int sineTableA, double[] tangentTableA, double[] tangentTableB)  
 
 PMD is telling us that the formal parameter "double[] SINE_TABLE_A" does not match the naming convention. Indeed if we, check for other formal parameter of type double[] in the code base they are all named after the regex [a-z][a-zA-Z0-9]* (exemple : static double slowCos(final double x, final double[] result))  
+</p>  
+
