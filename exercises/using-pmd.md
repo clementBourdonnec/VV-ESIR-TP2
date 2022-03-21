@@ -8,7 +8,10 @@ Pick a Java project from Github (see the [instructions](../sujet.md) for suggest
 
 <b>File</b> : /commons-math-master/commons-math-core/src/main/java/org/apache/commons/math4/core/jdkmath/AccurateMath.java:4086 
 
-<b>Code</b>        : PrintStream out = System.out;
+<b>Code</b>        :
+```java
+PrintStream out = System.out;
+```
 
 <b>PMD error</b>   : "CloseResource:	Ensure that resources like this PrintStream object are closed after use"  
 
