@@ -20,7 +20,9 @@ PMD is complaining because there is no call to "out.close()" in the method. But 
 <b>File</b>        : /commons-math-master/commons-math-core/src/main/java/org/apache/commons/math4/core/jdkmath/AccurateMathCalc.java:100  
 
 <b>Code</b>        : 
-```java private static void buildSinCosTables(double[] SINE_TABLE_A, double[] SINE_TABLE_B,  double[] COSINE_TABLE_A, double[] COSINE_TABLE_B, int SINE_TABLE_LEN,double[] TANGENT_TABLE_A, double[] TANGENT_TABLE_B)  ```
+```java
+private static void buildSinCosTables(double[] SINE_TABLE_A, double[] SINE_TABLE_B,  double[] COSINE_TABLE_A, double[] COSINE_TABLE_B, int SINE_TABLE_LEN,double[] TANGENT_TABLE_A, double[] TANGENT_TABLE_B)
+```
                                           
 <b>PMD error</b>   : FormalParameterNamingConventions:	The method parameter name 'SINE_TABLE_A' doesn't match '[a-z][a-zA-Z0-9]*'  
 
