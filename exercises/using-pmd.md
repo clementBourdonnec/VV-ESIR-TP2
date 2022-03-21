@@ -13,7 +13,7 @@ Pick a Java project from Github (see the [instructions](../sujet.md) for suggest
 PrintStream out = System.out;
 ```
 
-<b>PMD error</b>   : "CloseResource:	Ensure that resources like this PrintStream object are closed after use"  
+<b>PMD error</b>   : ```"CloseResource:	Ensure that resources like this PrintStream object are closed after use"``` 
 
 PMD is complaining because there is no call to "out.close()" in the method. But calling "out.close()" will close System.out wich will cause every upcoming   System.out.println() to fail.  
 
@@ -29,7 +29,7 @@ private static void buildSinCosTables(double[] SINE_TABLE_A, double[] SINE_TABLE
                                           int SINE_TABLE_LEN,double[] TANGENT_TABLE_A, double[] TANGENT_TABLE_B)
 ```
                                           
-<b>PMD error</b>   : FormalParameterNamingConventions:	The method parameter name 'SINE_TABLE_A' doesn't match '[a-z][a-zA-Z0-9]*'  
+<b>PMD error</b>   :``` FormalParameterNamingConventions:	The method parameter name 'SINE_TABLE_A' doesn't match '[a-z][a-zA-Z0-9]*'```  
 
 <b>Solving</b>     : 
 ```java
