@@ -26,10 +26,12 @@ private static void buildSinCosTables(double[] SINE_TABLE_A, double[] SINE_TABLE
                                           
 <b>PMD error</b>   : FormalParameterNamingConventions:	The method parameter name 'SINE_TABLE_A' doesn't match '[a-z][a-zA-Z0-9]*'  
 
-<b>Solving</b>     : private static void buildSinCosTables(double[] sineTableA, double[] sineTableB,  
+<b>Solving</b>     : 
+```java
+private static void buildSinCosTables(double[] sineTableA, double[] sineTableB,  
                                           double[] cosineTableA, double[] cosineTableB,  
                                           int sineTableA, double[] tangentTableA, double[] tangentTableB)  
-
+```
 PMD is telling us that the formal parameter "double[] SINE_TABLE_A" does not match the naming convention. Indeed if we, check for other formal parameter of type double[] in the code base they are all named after the regex [a-z][a-zA-Z0-9]* (exemple : static double slowCos(final double x, final double[] result))  
  
 
