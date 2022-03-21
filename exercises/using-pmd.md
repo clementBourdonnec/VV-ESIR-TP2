@@ -6,22 +6,26 @@ Pick a Java project from Github (see the [instructions](../sujet.md) for suggest
 
 ### False Positive
 
-File        : /commons-math-master/commons-math-core/src/main/java/org/apache/commons/math4/core/jdkmath/AccurateMath.java:4086  
-Code        : PrintStream out = System.out;
-PMD error   : "CloseResource:	Ensure that resources like this PrintStream object are closed after use"  
+<b>File</b> : /commons-math-master/commons-math-core/src/main/java/org/apache/commons/math4/core/jdkmath/AccurateMath.java:4086 
+
+<b>Code</b>        : PrintStream out = System.out;
+
+<b>PMD error</b>   : "CloseResource:	Ensure that resources like this PrintStream object are closed after use"  
 
 PMD is complaining because there is no call to "out.close()" in the method. But calling "out.close()" will close System.out wich will cause every upcoming   System.out.println() to fail.  
 
 
 ### True Positive
 
-File        : /commons-math-master/commons-math-core/src/main/java/org/apache/commons/math4/core/jdkmath/AccurateMathCalc.java:100  
-Code        : private static void buildSinCosTables(double[] SINE_TABLE_A, double[] SINE_TABLE_B,  
+<b>File</b>        : /commons-math-master/commons-math-core/src/main/java/org/apache/commons/math4/core/jdkmath/AccurateMathCalc.java:100  
+
+<b>Code</b>        : private static void buildSinCosTables(double[] SINE_TABLE_A, double[] SINE_TABLE_B,  
                                           double[] COSINE_TABLE_A, double[] COSINE_TABLE_B,  
                                           int SINE_TABLE_LEN, double[] TANGENT_TABLE_A, double[] TANGENT_TABLE_B)  
-PMD error   : FormalParameterNamingConventions:	The method parameter name 'SINE_TABLE_A' doesn't match '[a-z][a-zA-Z0-9]*'  
+                                          
+<b>PMD error</b>   : FormalParameterNamingConventions:	The method parameter name 'SINE_TABLE_A' doesn't match '[a-z][a-zA-Z0-9]*'  
 
-Solving     : private static void buildSinCosTables(double[] sineTableA, double[] sineTableB,  
+<b>Solving</b>     : private static void buildSinCosTables(double[] sineTableA, double[] sineTableB,  
                                           double[] cosineTableA, double[] cosineTableB,  
                                           int sineTableA, double[] tangentTableA, double[] tangentTableB)  
 
