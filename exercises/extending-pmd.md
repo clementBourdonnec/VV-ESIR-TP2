@@ -51,9 +51,8 @@ We have made a custom PMD rule using Xpath
 
 Using it with PMD on Apache commons math gives us :
 
-```/commons-math-master/commons-math-legacy/src/test/java/org/apache/commons/math4/legacy/analysis/interpolation/TricubicInterpolatorTest.java:200```
-
-```ThreeNestedFor:	At most 2 nested FOR loop```
+```
+/commons-math-master/commons-math-legacy/src/test/java/org/apache/commons/math4/legacy/analysis/interpolation/TricubicInterpolatorTest.java:200 : ThreeNestedFor:	At most 2 nested FOR loop```
 
 If we check the <b>TricubicInterpolatorTest.java</b> file at line 200
 
