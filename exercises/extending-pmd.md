@@ -23,3 +23,26 @@ Use your rule with different projects and describe you findings below. See the [
 
 ## Answer
 
+We have made a custom PMD rule using Xpath
+```xml
+<rule name="ThreeNestedFor"
+      language="java"
+      message="At most 2 nested FOR loop"
+      class="net.sourceforge.pmd.lang.rule.XPathRule">
+   <description>
+
+   </description>
+   <priority>1</priority>
+   <properties>
+      <property name="version" value="2.0"/>
+      <property name="xpath">
+         <value>
+<![CDATA[
+//ForStatement/*/*/*/*/ForStatement/*/*/*/*/ForStatement
+]]>
+         </value>
+      </property>
+   </properties>
+</rule>
+
+```
